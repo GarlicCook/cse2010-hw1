@@ -1,6 +1,6 @@
 ## Homework #1
 
-**Due: April 4 (Thursday)**
+**Due: March 28 (Friday)**
 
 In homework #1, you have two programs to complete: `InsertionSort.java` and `Utils.java`.
 
@@ -131,5 +131,5 @@ add fields and `private` methods if necessary. **However, no given `public` meth
 
 - Your source codes archived in `.zip` or `.jar` format.
     - Subject: Homework#1, Section [A|B], 성명, 학번
-    - Email to your TA (김정인, rkrkrk24@hanyang.ac.kr)
+    - Email to your TA (박정빈, pjb0226@hanyang.ac.kr)
 
