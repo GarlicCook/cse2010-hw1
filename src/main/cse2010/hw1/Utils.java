@@ -9,7 +9,11 @@ public class Utils {
      * @return index of a matching element, -1 otherwise
      */
     public static int findIndex(int[] xs, int target) {
-
+        for(int i = 0; i < xs.length; i++) {
+            if(xs[i] == target) {
+                return i;
+            }
+        }
         return -1;
     }
 
@@ -19,8 +23,11 @@ public class Utils {
      * @return sum of an array
      */
     public static double sum(double[] xs) {
-
-        return 0.0;
+        double sum = 0.0;
+        for(int i = 0; i < xs.length; i++) {
+            sum += xs[i];
+        }
+        return sum;
     }
 
     /**
@@ -29,8 +36,21 @@ public class Utils {
      * @return a newly created array containing elements of xs in reversed order
      */
     public static String[] reverse(String[] xs) {
-
-        return null;
+        String[] result = new String[xs.length];
+        if(xs != null && xs.length != 0) {
+            if(result.length % 2 == 1) {
+                for(int i = 0; i < (result.length / 2); i++) {
+                    result[i] = xs[result.length - i - 1];
+                    result[result.length - i - 1] = xs[i];
+                } result[result.length / 2] = xs[result.length / 2];
+            }else{
+                for(int i = 0; i < (result.length / 2); i++) {
+                    result[i] = xs[result.length - i - 1];
+                    result[result.length - i - 1] = xs[i];
+                }
+            }
+        }
+        return result;
     }
 
     /**
@@ -40,9 +60,9 @@ public class Utils {
      * @param j index of element to be swapped
      */
     public static void swap(int[] xs, int i, int j) {
-        /*
-            Complete code here.
-         */
+        int tmp = xs[i];
+        xs[i] = xs[j];
+        xs[j] = tmp;
     }
 
     /**
@@ -53,7 +73,11 @@ public class Utils {
      * @param xs String array
      */
     public static void reverse_in_place(String[] xs) {
-
+        for(int i = 0; i < xs.length/2; i++) {
+            String tmp = xs[i];
+            xs[i] = xs[xs.length - i - 1];
+            xs[xs.length - i - 1] = tmp;
+        }
     }
 
     /**
@@ -70,8 +94,13 @@ public class Utils {
      *      2.5 = (1 + 2 + 3 + 4) / 4
      */
     public static double[] average(int[] xs) {
-
-        return null;
+        double[] sums = new double[xs.length];
+        int sum = 0;
+        for(int i = 0; i < xs.length; i++) {
+            sum += xs[i];
+            sums[i] = sum / (i + 1.0);
+        }
+        return sums;
     }
 
 }

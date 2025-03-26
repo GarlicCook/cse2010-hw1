@@ -1,4 +1,5 @@
 package cse2010.hw1;
+import cse2010.hw1.Utils;
 
 public class InsertionSort {
 
@@ -19,10 +20,11 @@ public class InsertionSort {
      * @param k index of element to be inserted
      */
     private static void insert(int[] xs, int k) {
-        /*
-            Complete code here. You must call `swap()` method in `Utils`.
-         */
-        throw new RuntimeException("Not implemented yet."); // Remove this line when you implement this method.
+        for(int i = k; i > 0; i--) {
+            if(xs[i-1] < xs[i]) {
+                Utils.swap(xs, i, i-1);
+            }
+        }
     }
 
 }
